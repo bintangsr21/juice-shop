@@ -1,0 +1,35 @@
+name: DevSecOps Snyk SCA
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+jobs:
+  snyk-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Snyk SCA Scan
+        uses: snyk/actions/node@master
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          args: --severity-threshold=high
+
+      - name: Snyk Monitor
+        run: npx snyk monitor
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        if: github.ref == 'refs/heads/main'
+```[cite: 3, 4]
