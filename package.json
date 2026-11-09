@@ -115,7 +115,7 @@
     "express-security.txt": "^2.0.0",
     "feature-policy": "^0.6.0",
     "file-stream-rotator": "^1.0.0",
-    "file-type": "^16.5.4",
+    "file-type": "^21.3.1",
     "finale-rest": "^1.2.2",
     "fs-extra": "^9.1.0",
     "glob": "^10.4.5",
@@ -157,7 +157,7 @@
     "zod": "^4.4.3"
   },
   "devDependencies": {
-    "@cyclonedx/cyclonedx-npm": "^2.0.0||^3.0.0||^4.00",
+    "@cyclonedx/cyclonedx-npm": "^6.0.0",
     "@eslint/js": "^9.33.0",
     "@istanbuljs/nyc-config-typescript": "^1.0.2",
     "@types/clarinet": "^0.12.3",
