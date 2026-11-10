@@ -1,0 +1,354 @@
+[35m.dependabot/config.yml[m[36m:[m[32m13[m[36m:[m          dependency_name: "[1;31mexpress-jwt[m"
+[35m.dependabot/config.yml[m[36m:[m[32m22[m[36m:[m          dependency_name: "[1;31mjsonwebtoken[m"
+[35m.well-known/csaf/2017/juice-shop-sa-20200513-express-jwt.json[m[36m:[m[32m29[m[36m:[m    "title": "juice-shop-sa-20200513-[1;31mexpress-jwt[m",
+[35m.well-known/csaf/2017/juice-shop-sa-20200513-express-jwt.json[m[36m:[m[32m39[m[36m:[m      "id": "juice-shop-sa-20200513-[1;31mexpress-jwt[m",
+[35m.well-known/csaf/2017/juice-shop-sa-20200513-express-jwt.json.sha512[m[36m:[m[32m1[m[36m:[m7e7ce7c65db3bf0625fcea4573d25cff41f2f7e3474f2c74334b14fc65bb4fd26af802ad17a3a03bf0eee6827a00fb8f7905f338c31b5e6ea9cb31620242e843  juice-shop-sa-20200513-[1;31mexpress-jwt[m.json
+[35m.well-known/csaf/changes.csv[m[36m:[m[32m1[m[36m:[m2017/juice-shop-sa-20200513-[1;31mexpress-jwt[m.json,2024-03-03T11:00:00.000Z
+[35m.well-known/csaf/index.txt[m[36m:[m[32m1[m[36m:[m2017/juice-shop-sa-20200513-[1;31mexpress-jwt[m.json
+[35mftp/package-lock.json.bak[m[36m:[m[32m22[m[36m:[m        "[1;31mexpress-jwt[m": "0.1.3",
+[35mftp/package-lock.json.bak[m[36m:[m[32m36[m[36m:[m        "[1;31mjsonwebtoken[m": "~8",
+[35mftp/package-lock.json.bak[m[36m:[m[32m4121[m[36m:[m    "node_modules/[1;31mexpress-jwt[m": {
+[35mftp/package-lock.json.bak[m[36m:[m[32m4123[m[36m:[m      "resolved": "https://registry.npmjs.org/[1;31mexpress-jwt[m/-/[1;31mexpress-jwt[m-0.1.3.tgz",
+[35mftp/package-lock.json.bak[m[36m:[m[32m4126[m[36m:[m        "[1;31mjsonwebtoken[m": "~0.1.0"
+[35mftp/package-lock.json.bak[m[36m:[m[32m4132[m[36m:[m    "node_modules/[1;31mexpress-jwt[m/node_modules/[1;31mjsonwebtoken[m": {
+[35mftp/package-lock.json.bak[m[36m:[m[32m4134[m[36m:[m      "resolved": "https://registry.npmjs.org/[1;31mjsonwebtoken[m/-/[1;31mjsonwebtoken[m-0.1.0.tgz",
+[35mftp/package-lock.json.bak[m[36m:[m[32m4142[m[36m:[m    "node_modules/[1;31mexpress-jwt[m/node_modules/jwa": {
+[35mftp/package-lock.json.bak[m[36m:[m[32m4150[m[36m:[m    "node_modules/[1;31mexpress-jwt[m/node_modules/jws": {
+[35mftp/package-lock.json.bak[m[36m:[m[32m4160[m[36m:[m    "node_modules/[1;31mexpress-jwt[m/node_modules/moment": {
+[35mftp/package-lock.json.bak[m[36m:[m[32m8021[m[36m:[m    "node_modules/[1;31mjsonwebtoken[m": {
+[35mftp/package-lock.json.bak[m[36m:[m[32m8023[m[36m:[m      "resolved": "https://registry.npmjs.org/[1;31mjsonwebtoken[m/-/[1;31mjsonwebtoken[m-8.5.1.tgz",
+[35mftp/package-lock.json.bak[m[36m:[m[32m8042[m[36m:[m    "node_modules/[1;31mjsonwebtoken[m/node_modules/ms": {
+[35mftp/package.json.bak[m[36m:[m[32m49[m[36m:[m    "[1;31mexpress-jwt[m": "0.1.3",
+[35mftp/package.json.bak[m[36m:[m[32m63[m[36m:[m    "[1;31mjsonwebtoken[m": "~8",
+[35mlib/insecurity.ts[m[36m:[m[32m10[m[36m:[mimport [1;31mexpressJwt[m from '[1;31mexpress-jwt[m'
+[35mlib/insecurity.ts[m[36m:[m[32m11[m[36m:[mimport jwt from '[1;31mjsonwebtoken[m'
+[35mlib/insecurity.ts[m[36m:[m[32m52[m[36m:[mexport const isAuthorized = () => [1;31mexpressJwt[m(({ secret: publicKey }) as any)
+[35mlib/insecurity.ts[m[36m:[m[32m53[m[36m:[mexport const denyAll = () => [1;31mexpressJwt[m({ secret: '' + Math.random() } as any)
+[35mlib/insecurity.ts[m[36m:[m[32m54[m[36m:[mexport const authorize = (user = {}) => [1;31mjwt.sign[m(user, privateKey, { expiresIn: '6h', algorithm: 'RS256' })
+[35mlib/insecurity.ts[m[36m:[m[32m189[m[36m:[m    [1;31mjwt.verify[m(token, publicKey, (err: Error | null, decoded: any) => {
+[35mpackage.json[m[36m:[m[32m112[m[36m:[m    "[1;31mexpress-jwt[m": "0.1.3",
+[35mpackage.json[m[36m:[m[32m129[m[36m:[m    "[1;31mjsonwebtoken[m": "0.4.0",
+[35mpackage.json[m[36m:[m[32m174[m[36m:[m    "@types/[1;31mexpress-jwt[m": "^6.0.4",
+[35mpackage.json[m[36m:[m[32m180[m[36m:[m    "@types/[1;31mjsonwebtoken[m": "^8.5.9",
+[35mroutes/authenticatedUsers.ts[m[36m:[m[32m7[m[36m:[mimport { decode } from '[1;31mjsonwebtoken[m'
+[35mroutes/verify.ts[m[36m:[m[32m8[m[36m:[mimport jwt from '[1;31mjsonwebtoken[m'
+[35mroutes/verify.ts[m[36m:[m[32m125[m[36m:[m    [1;31mjwt.verify[m(token, security.publicKey, (err: jwt.VerifyErrors | null) => {
+[35mroutes/verify.ts[m[36m:[m[32m262[m[36m:[m        { [Op.like]: '%[1;31mexpress-jwt[m%' },
+[35msnyk-full-report.json[m[36m:[m[32m2070[m[36m:[m      "moduleName": "[1;31mexpress-jwt[m",
+[35msnyk-full-report.json[m[36m:[m[32m2073[m[36m:[m          "url": "https://github.com/auth0/[1;31mexpress-jwt[m/commit/7ecab5f8f0cab5297c2b863596566eb0c019cdef",
+[35msnyk-full-report.json[m[36m:[m[32m2106[m[36m:[m      "description": "## Overview\n[[1;31mexpress-jwt[m](https://www.npmjs.com/package/[1;31mexpress-jwt[m) is a JWT authentication middleware.\n\nAffected versions of this package are vulnerable to Authorization Bypass. The `algorithms` entry to be specified in the configuration is not being enforced. When `algorithms` is not specified in the configuration, with the combination of `jwks-rsa`, it may lead to authorization bypass.\n## Remediation\nUpgrade `[1;31mexpress-jwt[m` to version 6.0.0 or higher.\n## References\n- [GitHub Commit](https://github.com/auth0/[1;31mexpress-jwt[m/commit/7ecab5f8f0cab5297c2b863596566eb0c019cdef)\n",
+[35msnyk-full-report.json[m[36m:[m[32m2123[m[36m:[m      "packageName": "[1;31mexpress-jwt[m",
+[35msnyk-full-report.json[m[36m:[m[32m2152[m[36m:[m        "[1;31mexpress-jwt[m@0.1.3"
+[35msnyk-full-report.json[m[36m:[m[32m2156[m[36m:[m        "[1;31mexpress-jwt[m@6.0.0"
+[35msnyk-full-report.json[m[36m:[m[32m2160[m[36m:[m      "name": "[1;31mexpress-jwt[m",
+[35msnyk-full-report.json[m[36m:[m[32m2162[m[36m:[m      "__filename": "C:\\Users\\ACER\\juice-shop\\node_modules\\[1;31mexpress-jwt[m\\package.json",
+[35msnyk-full-report.json[m[36m:[m[32m4439[m[36m:[m      "moduleName": "[1;31mjsonwebtoken[m",
+[35msnyk-full-report.json[m[36m:[m[32m4442[m[36m:[m          "url": "https://github.com/auth0/node-[1;31mjsonwebtoken[m/commit/e1fa9dcc12054a8681db4e6373da1b30cf7016e3",
+[35msnyk-full-report.json[m[36m:[m[32m4446[m[36m:[m          "url": "https://github.com/auth0/node-[1;31mjsonwebtoken[m/releases/tag/v9.0.0",
+[35msnyk-full-report.json[m[36m:[m[32m4479[m[36m:[m      "description": "## Overview\n[[1;31mjsonwebtoken[m](https://github.com/auth0/node-[1;31mjsonwebtoken[m) is a JSON Web Token implementation (symmetric and asymmetric)\n\nAffected versions of this package are vulnerable to Improper Authentication such that the lack of algorithm definition in the `[1;31mjwt.verify[m()` function can lead to signature validation bypass due to defaulting to the `none` algorithm for signature verification. \r\n\r\n## Exploitability\r\nUsers are affected only if all of the following conditions are true for the `[1;31mjwt.verify[m()` function:\r\n\r\n1) A token with no signature is received.\r\n\r\n2) No algorithms are specified.\r\n\r\n3) A falsy (e.g., `null`, `false`, `undefined`) secret or key is passed.\n## Remediation\nUpgrade `[1;31mjsonwebtoken[m` to version 9.0.0 or higher.\n## References\n- [GitHub Commit](https://github.com/auth0/node-[1;31mjsonwebtoken[m/commit/e1fa9dcc12054a8681db4e6373da1b30cf7016e3)\n- [GitHub Release](https://github.com/auth0/node-[1;31mjsonwebtoken[m/releases/tag/v9.0.0)\n",
+[35msnyk-full-report.json[m[36m:[m[32m4496[m[36m:[m      "packageName": "[1;31mjsonwebtoken[m",
+[35msnyk-full-report.json[m[36m:[m[32m4525[m[36m:[m        "[1;31mexpress-jwt[m@0.1.3",
+[35msnyk-full-report.json[m[36m:[m[32m4526[m[36m:[m        "[1;31mjsonwebtoken[m@0.1.0"
+[35msnyk-full-report.json[m[36m:[m[32m4530[m[36m:[m        "[1;31mexpress-jwt[m@7.7.8",
+[35msnyk-full-report.json[m[36m:[m[32m4531[m[36m:[m        "[1;31mjsonwebtoken[m@9.0.3"
+[35msnyk-full-report.json[m[36m:[m[32m4535[m[36m:[m      "name": "[1;31mjsonwebtoken[m",
+[35msnyk-full-report.json[m[36m:[m[32m4537[m[36m:[m      "__filename": "C:\\Users\\ACER\\juice-shop\\node_modules\\[1;31mexpress-jwt[m\\node_modules\\[1;31mjsonwebtoken[m\\package.json",
+[35msnyk-full-report.json[m[36m:[m[32m4566[m[36m:[m      "moduleName": "[1;31mjsonwebtoken[m",
+[35msnyk-full-report.json[m[36m:[m[32m4569[m[36m:[m          "url": "https://github.com/auth0/node-[1;31mjsonwebtoken[m/commit/e1fa9dcc12054a8681db4e6373da1b30cf7016e3",
+[35msnyk-full-report.json[m[36m:[m[32m4573[m[36m:[m          "url": "https://github.com/auth0/node-[1;31mjsonwebtoken[m/releases/tag/v9.0.0",
+[35msnyk-full-report.json[m[36m:[m[32m4606[m[36m:[m      "description": "## Overview\n[[1;31mjsonwebtoken[m](https://github.com/auth0/node-[1;31mjsonwebtoken[m) is a JSON Web Token implementation (symmetric and asymmetric)\n\nAffected versions of this package are vulnerable to Improper Restriction of Security Token Assignment via the `secretOrPublicKey ` argument due to misconfigurations of the key retrieval function `[1;31mjwt.verify[m()`. Exploiting this vulnerability might result in incorrect verification of forged tokens when tokens signed with an asymmetric public key could be verified with a symmetric HS256 algorithm.\r\n\r\n**Note:**\r\nThis vulnerability affects your application if it supports the usage of both symmetric and asymmetric keys in `[1;31mjwt.verify[m()` implementation with the same key retrieval function.\n## Remediation\nUpgrade `[1;31mjsonwebtoken[m` to version 9.0.0 or higher.\n## References\n- [GitHub Commit](https://github.com/auth0/node-[1;31mjsonwebtoken[m/commit/e1fa9dcc12054a8681db4e6373da1b30cf7016e3)\n- [GitHub Release](https://github.com/auth0/node-[1;31mjsonwebtoken[m/releases/tag/v9.0.0)\n",
+[35msnyk-full-report.json[m[36m:[m[32m4623[m[36m:[m      "packageName": "[1;31mjsonwebtoken[m",
+[35msnyk-full-report.json[m[36m:[m[32m4652[m[36m:[m        "[1;31mexpress-jwt[m@0.1.3",
+[35msnyk-full-report.json[m[36m:[m[32m4653[m[36m:[m        "[1;31mjsonwebtoken[m@0.1.0"
+[35msnyk-full-report.json[m[36m:[m[32m4657[m[36m:[m        "[1;31mexpress-jwt[m@7.7.8",
+[35msnyk-full-report.json[m[36m:[m[32m4658[m[36m:[m        "[1;31mjsonwebtoken[m@9.0.3"
+[35msnyk-full-report.json[m[36m:[m[32m4662[m[36m:[m      "name": "[1;31mjsonwebtoken[m",
+[35msnyk-full-report.json[m[36m:[m[32m4664[m[36m:[m      "__filename": "C:\\Users\\ACER\\juice-shop\\node_modules\\[1;31mexpress-jwt[m\\node_modules\\[1;31mjsonwebtoken[m\\package.json",
+[35msnyk-full-report.json[m[36m:[m[32m4693[m[36m:[m      "moduleName": "[1;31mjsonwebtoken[m",
+[35msnyk-full-report.json[m[36m:[m[32m4696[m[36m:[m          "url": "https://github.com/auth0/node-[1;31mjsonwebtoken[m/commit/e1fa9dcc12054a8681db4e6373da1b30cf7016e3",
+[35msnyk-full-report.json[m[36m:[m[32m4700[m[36m:[m          "url": "https://github.com/auth0/node-[1;31mjsonwebtoken[m/releases/tag/v9.0.0",
+[35msnyk-full-report.json[m[36m:[m[32m4733[m[36m:[m      "description": "## Overview\n[[1;31mjsonwebtoken[m](https://github.com/auth0/node-[1;31mjsonwebtoken[m) is a JSON Web Token implementation (symmetric and asymmetric)\n\nAffected versions of this package are vulnerable to Use of a Broken or Risky Cryptographic Algorithm such that the library can be misconfigured to use legacy, insecure key types for signature verification. For example, DSA keys could be used with the RS256 algorithm. \r\n\r\n## Exploitability\r\n\r\nUsers are affected when using an algorithm and a key type _other_ than the combinations mentioned below:\r\n\r\nEC: ES256, ES384, ES512\r\n                  \r\nRSA: RS256, RS384, RS512, PS256, PS384, PS512 \r\n\r\nRSA-PSS: PS256, PS384, PS512                      \r\n\r\nAnd for Elliptic Curve algorithms:\r\n\r\nES256: prime256v1\r\n\r\nES384: secp384r1\r\n\r\nES512:  secp521r1 \r\n\r\n## Workaround \r\n\r\nUsers who are unable to upgrade to the fixed version can use the  `allowInvalidAsymmetricKeyTypes` option  to `true` in the `sign()` and `verify()` functions to continue usage of invalid key type/algorithm combination in 9.0.0 for legacy compatibility.\n## Remediation\nUpgrade `[1;31mjsonwebtoken[m` to version 9.0.0 or higher.\n## References\n- [GitHub Commit](https://github.com/auth0/node-[1;31mjsonwebtoken[m/commit/e1fa9dcc12054a8681db4e6373da1b30cf7016e3)\n- [GitHub Release](https://github.com/auth0/node-[1;31mjsonwebtoken[m/releases/tag/v9.0.0)\n",
+[35msnyk-full-report.json[m[36m:[m[32m4750[m[36m:[m      "packageName": "[1;31mjsonwebtoken[m",
+[35msnyk-full-report.json[m[36m:[m[32m4779[m[36m:[m        "[1;31mexpress-jwt[m@0.1.3",
+[35msnyk-full-report.json[m[36m:[m[32m4780[m[36m:[m        "[1;31mjsonwebtoken[m@0.1.0"
+[35msnyk-full-report.json[m[36m:[m[32m4784[m[36m:[m        "[1;31mexpress-jwt[m@7.7.8",
+[35msnyk-full-report.json[m[36m:[m[32m4785[m[36m:[m        "[1;31mjsonwebtoken[m@9.0.3"
+[35msnyk-full-report.json[m[36m:[m[32m4789[m[36m:[m      "name": "[1;31mjsonwebtoken[m",
+[35msnyk-full-report.json[m[36m:[m[32m4791[m[36m:[m      "__filename": "C:\\Users\\ACER\\juice-shop\\node_modules\\[1;31mexpress-jwt[m\\node_modules\\[1;31mjsonwebtoken[m\\package.json",
+[35msnyk-full-report.json[m[36m:[m[32m4795[m[36m:[m      "id": "npm:[1;31mjsonwebtoken[m:20150331",
+[35msnyk-full-report.json[m[36m:[m[32m4812[m[36m:[m          "id": "patch:npm:[1;31mjsonwebtoken[m:20150331:0",
+[35msnyk-full-report.json[m[36m:[m[32m4814[m[36m:[m            "https://snyk-patches.s3.amazonaws.com/npm/[1;31mjsonwebtoken[m/20150331/[1;31mjsonwebtoken[m_20150331_0_0_1bb584bc382295eeb7ee8c4452a673a77a68b687_snyk.patch"
+[35msnyk-full-report.json[m[36m:[m[32m4830[m[36m:[m      "moduleName": "[1;31mjsonwebtoken[m",
+[35msnyk-full-report.json[m[36m:[m[32m4837[m[36m:[m          "url": "https://github.com/auth0/node-[1;31mjsonwebtoken[m/commit/1bb584bc382295eeb7ee8c4452a673a77a68b687",
+[35msnyk-full-report.json[m[36m:[m[32m4898[m[36m:[m      "description": "## Overview\r\n[`[1;31mjsonwebtoken[m`](https://www.npmjs.com/package/[1;31mjsonwebtoken[m) is a JSON Web token implementation for symmetric and asymmetric keys.\r\nAffected versions of this package are vulnerable to an Authentication Bypass attack, due to the \"algorithm\" not being enforced. Attackers are given the opportunity to choose the algorithm sent to the server and generate signatures with arbitrary contents. The server expects an asymmetric key (RSA) but is sent a symmetric key (HMAC-SHA) with RSA's public key, so instead of going through a key validation process, the server will think the public key is actually an HMAC private key.\r\n\r\n## Remediation\r\nUpgrade `[1;31mjsonwebtoken[m` to version 4.2.2 or greater.\r\n\r\n## References\r\n- [GitHub Commit](https://github.com/auth0/node-[1;31mjsonwebtoken[m/commit/1bb584bc382295eeb7ee8c4452a673a77a68b687)\r\n- [Tim McLean Blog](https://www.timmclean.net/2015/02/25/jwt-alg-none.html)\r\n- [Auth0 Blog](https://auth0.com/blog/2015/03/31/critical-vulnerabilities-in-json-web-token-libraries/)",
+[35msnyk-full-report.json[m[36m:[m[32m4919[m[36m:[m          "npm:[1;31mjsonwebtoken[m:20150331"
+[35msnyk-full-report.json[m[36m:[m[32m4922[m[36m:[m      "packageName": "[1;31mjsonwebtoken[m",
+[35msnyk-full-report.json[m[36m:[m[32m4956[m[36m:[m        "[1;31mexpress-jwt[m@0.1.3",
+[35msnyk-full-report.json[m[36m:[m[32m4957[m[36m:[m        "[1;31mjsonwebtoken[m@0.1.0"
+[35msnyk-full-report.json[m[36m:[m[32m4961[m[36m:[m        "[1;31mexpress-jwt[m@3.0.0",
+[35msnyk-full-report.json[m[36m:[m[32m4962[m[36m:[m        "[1;31mjsonwebtoken[m@5.7.0"
+[35msnyk-full-report.json[m[36m:[m[32m4966[m[36m:[m      "name": "[1;31mjsonwebtoken[m",
+[35msnyk-full-report.json[m[36m:[m[32m4968[m[36m:[m      "__filename": "C:\\Users\\ACER\\juice-shop\\node_modules\\[1;31mexpress-jwt[m\\node_modules\\[1;31mjsonwebtoken[m\\package.json",
+[35msnyk-full-report.json[m[36m:[m[32m4997[m[36m:[m      "moduleName": "[1;31mjsonwebtoken[m",
+[35msnyk-full-report.json[m[36m:[m[32m5000[m[36m:[m          "url": "https://github.com/auth0/node-[1;31mjsonwebtoken[m/commit/e1fa9dcc12054a8681db4e6373da1b30cf7016e3",
+[35msnyk-full-report.json[m[36m:[m[32m5004[m[36m:[m          "url": "https://github.com/auth0/node-[1;31mjsonwebtoken[m/releases/tag/v9.0.0",
+[35msnyk-full-report.json[m[36m:[m[32m5037[m[36m:[m      "description": "## Overview\n[[1;31mjsonwebtoken[m](https://github.com/auth0/node-[1;31mjsonwebtoken[m) is a JSON Web Token implementation (symmetric and asymmetric)\n\nAffected versions of this package are vulnerable to Improper Authentication such that the lack of algorithm definition in the `[1;31mjwt.verify[m()` function can lead to signature validation bypass due to defaulting to the `none` algorithm for signature verification. \r\n\r\n## Exploitability\r\nUsers are affected only if all of the following conditions are true for the `[1;31mjwt.verify[m()` function:\r\n\r\n1) A token with no signature is received.\r\n\r\n2) No algorithms are specified.\r\n\r\n3) A falsy (e.g., `null`, `false`, `undefined`) secret or key is passed.\n## Remediation\nUpgrade `[1;31mjsonwebtoken[m` to version 9.0.0 or higher.\n## References\n- [GitHub Commit](https://github.com/auth0/node-[1;31mjsonwebtoken[m/commit/e1fa9dcc12054a8681db4e6373da1b30cf7016e3)\n- [GitHub Release](https://github.com/auth0/node-[1;31mjsonwebtoken[m/releases/tag/v9.0.0)\n",
+[35msnyk-full-report.json[m[36m:[m[32m5054[m[36m:[m      "packageName": "[1;31mjsonwebtoken[m",
+[35msnyk-full-report.json[m[36m:[m[32m5083[m[36m:[m        "[1;31mjsonwebtoken[m@0.4.0"
+[35msnyk-full-report.json[m[36m:[m[32m5087[m[36m:[m        "[1;31mjsonwebtoken[m@9.0.0"
+[35msnyk-full-report.json[m[36m:[m[32m5091[m[36m:[m      "name": "[1;31mjsonwebtoken[m",
+[35msnyk-full-report.json[m[36m:[m[32m5093[m[36m:[m      "__filename": "C:\\Users\\ACER\\juice-shop\\node_modules\\[1;31mjsonwebtoken[m\\package.json",
+[35msnyk-full-report.json[m[36m:[m[32m5122[m[36m:[m      "moduleName": "[1;31mjsonwebtoken[m",
+[35msnyk-full-report.json[m[36m:[m[32m5125[m[36m:[m          "url": "https://github.com/auth0/node-[1;31mjsonwebtoken[m/commit/e1fa9dcc12054a8681db4e6373da1b30cf7016e3",
+[35msnyk-full-report.json[m[36m:[m[32m5129[m[36m:[m          "url": "https://github.com/auth0/node-[1;31mjsonwebtoken[m/releases/tag/v9.0.0",
+[35msnyk-full-report.json[m[36m:[m[32m5162[m[36m:[m      "description": "## Overview\n[[1;31mjsonwebtoken[m](https://github.com/auth0/node-[1;31mjsonwebtoken[m) is a JSON Web Token implementation (symmetric and asymmetric)\n\nAffected versions of this package are vulnerable to Improper Restriction of Security Token Assignment via the `secretOrPublicKey ` argument due to misconfigurations of the key retrieval function `[1;31mjwt.verify[m()`. Exploiting this vulnerability might result in incorrect verification of forged tokens when tokens signed with an asymmetric public key could be verified with a symmetric HS256 algorithm.\r\n\r\n**Note:**\r\nThis vulnerability affects your application if it supports the usage of both symmetric and asymmetric keys in `[1;31mjwt.verify[m()` implementation with the same key retrieval function.\n## Remediation\nUpgrade `[1;31mjsonwebtoken[m` to version 9.0.0 or higher.\n## References\n- [GitHub Commit](https://github.com/auth0/node-[1;31mjsonwebtoken[m/commit/e1fa9dcc12054a8681db4e6373da1b30cf7016e3)\n- [GitHub Release](https://github.com/auth0/node-[1;31mjsonwebtoken[m/releases/tag/v9.0.0)\n",
+[35msnyk-full-report.json[m[36m:[m[32m5179[m[36m:[m      "packageName": "[1;31mjsonwebtoken[m",
+[35msnyk-full-report.json[m[36m:[m[32m5208[m[36m:[m        "[1;31mjsonwebtoken[m@0.4.0"
+[35msnyk-full-report.json[m[36m:[m[32m5212[m[36m:[m        "[1;31mjsonwebtoken[m@9.0.0"
+[35msnyk-full-report.json[m[36m:[m[32m5216[m[36m:[m      "name": "[1;31mjsonwebtoken[m",
+[35msnyk-full-report.json[m[36m:[m[32m5218[m[36m:[m      "__filename": "C:\\Users\\ACER\\juice-shop\\node_modules\\[1;31mjsonwebtoken[m\\package.json",
+[35msnyk-full-report.json[m[36m:[m[32m5247[m[36m:[m      "moduleName": "[1;31mjsonwebtoken[m",
+[35msnyk-full-report.json[m[36m:[m[32m5250[m[36m:[m          "url": "https://github.com/auth0/node-[1;31mjsonwebtoken[m/commit/e1fa9dcc12054a8681db4e6373da1b30cf7016e3",
+[35msnyk-full-report.json[m[36m:[m[32m5254[m[36m:[m          "url": "https://github.com/auth0/node-[1;31mjsonwebtoken[m/releases/tag/v9.0.0",
+[35msnyk-full-report.json[m[36m:[m[32m5287[m[36m:[m      "description": "## Overview\n[[1;31mjsonwebtoken[m](https://github.com/auth0/node-[1;31mjsonwebtoken[m) is a JSON Web Token implementation (symmetric and asymmetric)\n\nAffected versions of this package are vulnerable to Use of a Broken or Risky Cryptographic Algorithm such that the library can be misconfigured to use legacy, insecure key types for signature verification. For example, DSA keys could be used with the RS256 algorithm. \r\n\r\n## Exploitability\r\n\r\nUsers are affected when using an algorithm and a key type _other_ than the combinations mentioned below:\r\n\r\nEC: ES256, ES384, ES512\r\n                  \r\nRSA: RS256, RS384, RS512, PS256, PS384, PS512 \r\n\r\nRSA-PSS: PS256, PS384, PS512                      \r\n\r\nAnd for Elliptic Curve algorithms:\r\n\r\nES256: prime256v1\r\n\r\nES384: secp384r1\r\n\r\nES512:  secp521r1 \r\n\r\n## Workaround \r\n\r\nUsers who are unable to upgrade to the fixed version can use the  `allowInvalidAsymmetricKeyTypes` option  to `true` in the `sign()` and `verify()` functions to continue usage of invalid key type/algorithm combination in 9.0.0 for legacy compatibility.\n## Remediation\nUpgrade `[1;31mjsonwebtoken[m` to version 9.0.0 or higher.\n## References\n- [GitHub Commit](https://github.com/auth0/node-[1;31mjsonwebtoken[m/commit/e1fa9dcc12054a8681db4e6373da1b30cf7016e3)\n- [GitHub Release](https://github.com/auth0/node-[1;31mjsonwebtoken[m/releases/tag/v9.0.0)\n",
+[35msnyk-full-report.json[m[36m:[m[32m5304[m[36m:[m      "packageName": "[1;31mjsonwebtoken[m",
+[35msnyk-full-report.json[m[36m:[m[32m5333[m[36m:[m        "[1;31mjsonwebtoken[m@0.4.0"
+[35msnyk-full-report.json[m[36m:[m[32m5337[m[36m:[m        "[1;31mjsonwebtoken[m@9.0.0"
+[35msnyk-full-report.json[m[36m:[m[32m5341[m[36m:[m      "name": "[1;31mjsonwebtoken[m",
+[35msnyk-full-report.json[m[36m:[m[32m5343[m[36m:[m      "__filename": "C:\\Users\\ACER\\juice-shop\\node_modules\\[1;31mjsonwebtoken[m\\package.json",
+[35msnyk-full-report.json[m[36m:[m[32m5347[m[36m:[m      "id": "npm:[1;31mjsonwebtoken[m:20150331",
+[35msnyk-full-report.json[m[36m:[m[32m5364[m[36m:[m          "id": "patch:npm:[1;31mjsonwebtoken[m:20150331:0",
+[35msnyk-full-report.json[m[36m:[m[32m5366[m[36m:[m            "https://snyk-patches.s3.amazonaws.com/npm/[1;31mjsonwebtoken[m/20150331/[1;31mjsonwebtoken[m_20150331_0_0_1bb584bc382295eeb7ee8c4452a673a77a68b687_snyk.patch"
+[35msnyk-full-report.json[m[36m:[m[32m5382[m[36m:[m      "moduleName": "[1;31mjsonwebtoken[m",
+[35msnyk-full-report.json[m[36m:[m[32m5389[m[36m:[m          "url": "https://github.com/auth0/node-[1;31mjsonwebtoken[m/commit/1bb584bc382295eeb7ee8c4452a673a77a68b687",
+[35msnyk-full-report.json[m[36m:[m[32m5450[m[36m:[m      "description": "## Overview\r\n[`[1;31mjsonwebtoken[m`](https://www.npmjs.com/package/[1;31mjsonwebtoken[m) is a JSON Web token implementation for symmetric and asymmetric keys.\r\nAffected versions of this package are vulnerable to an Authentication Bypass attack, due to the \"algorithm\" not being enforced. Attackers are given the opportunity to choose the algorithm sent to the server and generate signatures with arbitrary contents. The server expects an asymmetric key (RSA) but is sent a symmetric key (HMAC-SHA) with RSA's public key, so instead of going through a key validation process, the server will think the public key is actually an HMAC private key.\r\n\r\n## Remediation\r\nUpgrade `[1;31mjsonwebtoken[m` to version 4.2.2 or greater.\r\n\r\n## References\r\n- [GitHub Commit](https://github.com/auth0/node-[1;31mjsonwebtoken[m/commit/1bb584bc382295eeb7ee8c4452a673a77a68b687)\r\n- [Tim McLean Blog](https://www.timmclean.net/2015/02/25/jwt-alg-none.html)\r\n- [Auth0 Blog](https://auth0.com/blog/2015/03/31/critical-vulnerabilities-in-json-web-token-libraries/)",
+[35msnyk-full-report.json[m[36m:[m[32m5471[m[36m:[m          "npm:[1;31mjsonwebtoken[m:20150331"
+[35msnyk-full-report.json[m[36m:[m[32m5474[m[36m:[m      "packageName": "[1;31mjsonwebtoken[m",
+[35msnyk-full-report.json[m[36m:[m[32m5508[m[36m:[m        "[1;31mjsonwebtoken[m@0.4.0"
+[35msnyk-full-report.json[m[36m:[m[32m5512[m[36m:[m        "[1;31mjsonwebtoken[m@5.0.0"
+[35msnyk-full-report.json[m[36m:[m[32m5516[m[36m:[m      "name": "[1;31mjsonwebtoken[m",
+[35msnyk-full-report.json[m[36m:[m[32m5518[m[36m:[m      "__filename": "C:\\Users\\ACER\\juice-shop\\node_modules\\[1;31mjsonwebtoken[m\\package.json",
+[35msnyk-full-report.json[m[36m:[m[32m5652[m[36m:[m        "[1;31mjsonwebtoken[m@0.4.0",
+[35msnyk-full-report.json[m[36m:[m[32m5657[m[36m:[m        "[1;31mjsonwebtoken[m@5.0.0",
+[35msnyk-full-report.json[m[36m:[m[32m5771[m[36m:[m        "[1;31mjsonwebtoken[m@0.4.0",
+[35msnyk-full-report.json[m[36m:[m[32m5776[m[36m:[m        "[1;31mjsonwebtoken[m@5.0.0",
+[35msnyk-full-report.json[m[36m:[m[32m5917[m[36m:[m        "[1;31mexpress-jwt[m@0.1.3",
+[35msnyk-full-report.json[m[36m:[m[32m5918[m[36m:[m        "[1;31mjsonwebtoken[m@0.1.0",
+[35msnyk-full-report.json[m[36m:[m[32m5923[m[36m:[m        "[1;31mexpress-jwt[m@3.0.0",
+[35msnyk-full-report.json[m[36m:[m[32m5924[m[36m:[m        "[1;31mjsonwebtoken[m@5.7.0",
+[35msnyk-full-report.json[m[36m:[m[32m6038[m[36m:[m        "[1;31mexpress-jwt[m@0.1.3",
+[35msnyk-full-report.json[m[36m:[m[32m6039[m[36m:[m        "[1;31mjsonwebtoken[m@0.1.0",
+[35msnyk-full-report.json[m[36m:[m[32m6044[m[36m:[m        "[1;31mexpress-jwt[m@3.0.0",
+[35msnyk-full-report.json[m[36m:[m[32m6045[m[36m:[m        "[1;31mjsonwebtoken[m@5.7.0",
+[35msnyk-full-report.json[m[36m:[m[32m8412[m[36m:[m        "[1;31mexpress-jwt[m@0.1.3",
+[35msnyk-full-report.json[m[36m:[m[32m8413[m[36m:[m        "[1;31mjsonwebtoken[m@0.1.0",
+[35msnyk-full-report.json[m[36m:[m[32m8418[m[36m:[m        "[1;31mexpress-jwt[m@3.0.0",
+[35msnyk-full-report.json[m[36m:[m[32m8419[m[36m:[m        "[1;31mjsonwebtoken[m@5.7.0"
+[35msnyk-full-report.json[m[36m:[m[32m8425[m[36m:[m      "__filename": "C:\\Users\\ACER\\juice-shop\\node_modules\\[1;31mexpress-jwt[m\\node_modules\\moment\\package.json",
+[35msnyk-full-report.json[m[36m:[m[32m8552[m[36m:[m        "[1;31mexpress-jwt[m@0.1.3",
+[35msnyk-full-report.json[m[36m:[m[32m8553[m[36m:[m        "[1;31mjsonwebtoken[m@0.1.0",
+[35msnyk-full-report.json[m[36m:[m[32m8558[m[36m:[m        "[1;31mexpress-jwt[m@3.0.0",
+[35msnyk-full-report.json[m[36m:[m[32m8559[m[36m:[m        "[1;31mjsonwebtoken[m@5.7.0"
+[35msnyk-full-report.json[m[36m:[m[32m8565[m[36m:[m      "__filename": "C:\\Users\\ACER\\juice-shop\\node_modules\\[1;31mexpress-jwt[m\\node_modules\\moment\\package.json",
+[35msnyk-full-report.json[m[36m:[m[32m8739[m[36m:[m        "[1;31mexpress-jwt[m@0.1.3",
+[35msnyk-full-report.json[m[36m:[m[32m8740[m[36m:[m        "[1;31mjsonwebtoken[m@0.1.0",
+[35msnyk-full-report.json[m[36m:[m[32m8745[m[36m:[m        "[1;31mexpress-jwt[m@3.0.0",
+[35msnyk-full-report.json[m[36m:[m[32m8746[m[36m:[m        "[1;31mjsonwebtoken[m@5.7.0"
+[35msnyk-full-report.json[m[36m:[m[32m8752[m[36m:[m      "__filename": "C:\\Users\\ACER\\juice-shop\\node_modules\\[1;31mexpress-jwt[m\\node_modules\\moment\\package.json",
+[35msnyk-full-report.json[m[36m:[m[32m8866[m[36m:[m        "[1;31mexpress-jwt[m@0.1.3",
+[35msnyk-full-report.json[m[36m:[m[32m8867[m[36m:[m        "[1;31mjsonwebtoken[m@0.1.0",
+[35msnyk-full-report.json[m[36m:[m[32m8872[m[36m:[m        "[1;31mexpress-jwt[m@3.0.0",
+[35msnyk-full-report.json[m[36m:[m[32m8873[m[36m:[m        "[1;31mjsonwebtoken[m@5.7.0"
+[35msnyk-full-report.json[m[36m:[m[32m8879[m[36m:[m      "__filename": "C:\\Users\\ACER\\juice-shop\\node_modules\\[1;31mexpress-jwt[m\\node_modules\\moment\\package.json",
+[35msnyk-full-report.json[m[36m:[m[32m9126[m[36m:[m        "[1;31mexpress-jwt[m@0.1.3",
+[35msnyk-full-report.json[m[36m:[m[32m9127[m[36m:[m        "[1;31mjsonwebtoken[m@0.1.0",
+[35msnyk-full-report.json[m[36m:[m[32m9132[m[36m:[m        "[1;31mexpress-jwt[m@3.0.0",
+[35msnyk-full-report.json[m[36m:[m[32m9133[m[36m:[m        "[1;31mjsonwebtoken[m@5.7.0"
+[35msnyk-full-report.json[m[36m:[m[32m9139[m[36m:[m      "__filename": "C:\\Users\\ACER\\juice-shop\\node_modules\\[1;31mexpress-jwt[m\\node_modules\\moment\\package.json",
+[35msnyk-full-report.json[m[36m:[m[32m17101[m[36m:[m        "[1;31mjsonwebtoken[m@0.4.0",
+[35msnyk-full-report.json[m[36m:[m[32m17107[m[36m:[m        "[1;31mjsonwebtoken[m@5.0.0",
+[35msnyk-full-report.json[m[36m:[m[32m17257[m[36m:[m        "[1;31mjsonwebtoken[m@0.4.0",
+[35msnyk-full-report.json[m[36m:[m[32m17264[m[36m:[m        "[1;31mjsonwebtoken[m@5.0.0",
+[35msnyk-full-report.json[m[36m:[m[32m17415[m[36m:[m        "[1;31mexpress-jwt[m@0.1.3",
+[35msnyk-full-report.json[m[36m:[m[32m17416[m[36m:[m        "[1;31mjsonwebtoken[m@0.1.0",
+[35msnyk-full-report.json[m[36m:[m[32m17422[m[36m:[m        "[1;31mexpress-jwt[m@3.0.0",
+[35msnyk-full-report.json[m[36m:[m[32m17423[m[36m:[m        "[1;31mjsonwebtoken[m@5.7.0",
+[35msnyk-full-report.json[m[36m:[m[32m17573[m[36m:[m        "[1;31mexpress-jwt[m@0.1.3",
+[35msnyk-full-report.json[m[36m:[m[32m17574[m[36m:[m        "[1;31mjsonwebtoken[m@0.1.0",
+[35msnyk-full-report.json[m[36m:[m[32m17581[m[36m:[m        "[1;31mexpress-jwt[m@3.0.0",
+[35msnyk-full-report.json[m[36m:[m[32m17582[m[36m:[m        "[1;31mjsonwebtoken[m@5.7.0",
+[35msnyk-full-report.json[m[36m:[m[32m20404[m[36m:[m      "[1;31mexpress-jwt[m@0.1.3": {
+[35msnyk-full-report.json[m[36m:[m[32m20405[m[36m:[m        "upgradeTo": "[1;31mexpress-jwt[m@7.7.8",
+[35msnyk-full-report.json[m[36m:[m[32m20407[m[36m:[m          "[1;31mjsonwebtoken[m@0.1.0",
+[35msnyk-full-report.json[m[36m:[m[32m20408[m[36m:[m          "[1;31mjsonwebtoken[m@0.1.0",
+[35msnyk-full-report.json[m[36m:[m[32m20409[m[36m:[m          "[1;31mjsonwebtoken[m@0.1.0",
+[35msnyk-full-report.json[m[36m:[m[32m20410[m[36m:[m          "[1;31mexpress-jwt[m@0.1.3",
+[35msnyk-full-report.json[m[36m:[m[32m20411[m[36m:[m          "[1;31mjsonwebtoken[m@0.1.0",
+[35msnyk-full-report.json[m[36m:[m[32m20426[m[36m:[m          "npm:[1;31mjsonwebtoken[m:20150331",
+[35msnyk-full-report.json[m[36m:[m[32m20455[m[36m:[m      "[1;31mjsonwebtoken[m@0.4.0": {
+[35msnyk-full-report.json[m[36m:[m[32m20456[m[36m:[m        "upgradeTo": "[1;31mjsonwebtoken[m@9.0.0",
+[35msnyk-full-report.json[m[36m:[m[32m20458[m[36m:[m          "[1;31mjsonwebtoken[m@0.4.0",
+[35msnyk-full-report.json[m[36m:[m[32m20459[m[36m:[m          "[1;31mjsonwebtoken[m@0.4.0",
+[35msnyk-full-report.json[m[36m:[m[32m20460[m[36m:[m          "[1;31mjsonwebtoken[m@0.4.0",
+[35msnyk-full-report.json[m[36m:[m[32m20461[m[36m:[m          "[1;31mjsonwebtoken[m@0.4.0",
+[35msnyk-full-report.json[m[36m:[m[32m20470[m[36m:[m          "npm:[1;31mjsonwebtoken[m:20150331",
+[35msnyk.json[m[36m:[m[32m2070[m[36m:[m      "moduleName": "[1;31mexpress-jwt[m",
+[35msnyk.json[m[36m:[m[32m2073[m[36m:[m          "url": "https://github.com/auth0/[1;31mexpress-jwt[m/commit/7ecab5f8f0cab5297c2b863596566eb0c019cdef",
+[35msnyk.json[m[36m:[m[32m2106[m[36m:[m      "description": "## Overview\n[[1;31mexpress-jwt[m](https://www.npmjs.com/package/[1;31mexpress-jwt[m) is a JWT authentication middleware.\n\nAffected versions of this package are vulnerable to Authorization Bypass. The `algorithms` entry to be specified in the configuration is not being enforced. When `algorithms` is not specified in the configuration, with the combination of `jwks-rsa`, it may lead to authorization bypass.\n## Remediation\nUpgrade `[1;31mexpress-jwt[m` to version 6.0.0 or higher.\n## References\n- [GitHub Commit](https://github.com/auth0/[1;31mexpress-jwt[m/commit/7ecab5f8f0cab5297c2b863596566eb0c019cdef)\n",
+[35msnyk.json[m[36m:[m[32m2123[m[36m:[m      "packageName": "[1;31mexpress-jwt[m",
+[35msnyk.json[m[36m:[m[32m2152[m[36m:[m        "[1;31mexpress-jwt[m@0.1.3"
+[35msnyk.json[m[36m:[m[32m2156[m[36m:[m        "[1;31mexpress-jwt[m@6.0.0"
+[35msnyk.json[m[36m:[m[32m2160[m[36m:[m      "name": "[1;31mexpress-jwt[m",
+[35msnyk.json[m[36m:[m[32m2162[m[36m:[m      "__filename": "C:\\Users\\ACER\\juice-shop\\node_modules\\[1;31mexpress-jwt[m\\package.json",
+[35msnyk.json[m[36m:[m[32m4439[m[36m:[m      "moduleName": "[1;31mjsonwebtoken[m",
+[35msnyk.json[m[36m:[m[32m4442[m[36m:[m          "url": "https://github.com/auth0/node-[1;31mjsonwebtoken[m/commit/e1fa9dcc12054a8681db4e6373da1b30cf7016e3",
+[35msnyk.json[m[36m:[m[32m4446[m[36m:[m          "url": "https://github.com/auth0/node-[1;31mjsonwebtoken[m/releases/tag/v9.0.0",
+[35msnyk.json[m[36m:[m[32m4479[m[36m:[m      "description": "## Overview\n[[1;31mjsonwebtoken[m](https://github.com/auth0/node-[1;31mjsonwebtoken[m) is a JSON Web Token implementation (symmetric and asymmetric)\n\nAffected versions of this package are vulnerable to Improper Authentication such that the lack of algorithm definition in the `[1;31mjwt.verify[m()` function can lead to signature validation bypass due to defaulting to the `none` algorithm for signature verification. \r\n\r\n## Exploitability\r\nUsers are affected only if all of the following conditions are true for the `[1;31mjwt.verify[m()` function:\r\n\r\n1) A token with no signature is received.\r\n\r\n2) No algorithms are specified.\r\n\r\n3) A falsy (e.g., `null`, `false`, `undefined`) secret or key is passed.\n## Remediation\nUpgrade `[1;31mjsonwebtoken[m` to version 9.0.0 or higher.\n## References\n- [GitHub Commit](https://github.com/auth0/node-[1;31mjsonwebtoken[m/commit/e1fa9dcc12054a8681db4e6373da1b30cf7016e3)\n- [GitHub Release](https://github.com/auth0/node-[1;31mjsonwebtoken[m/releases/tag/v9.0.0)\n",
+[35msnyk.json[m[36m:[m[32m4496[m[36m:[m      "packageName": "[1;31mjsonwebtoken[m",
+[35msnyk.json[m[36m:[m[32m4525[m[36m:[m        "[1;31mexpress-jwt[m@0.1.3",
+[35msnyk.json[m[36m:[m[32m4526[m[36m:[m        "[1;31mjsonwebtoken[m@0.1.0"
+[35msnyk.json[m[36m:[m[32m4530[m[36m:[m        "[1;31mexpress-jwt[m@7.7.8",
+[35msnyk.json[m[36m:[m[32m4531[m[36m:[m        "[1;31mjsonwebtoken[m@9.0.3"
+[35msnyk.json[m[36m:[m[32m4535[m[36m:[m      "name": "[1;31mjsonwebtoken[m",
+[35msnyk.json[m[36m:[m[32m4537[m[36m:[m      "__filename": "C:\\Users\\ACER\\juice-shop\\node_modules\\[1;31mexpress-jwt[m\\node_modules\\[1;31mjsonwebtoken[m\\package.json",
+[35msnyk.json[m[36m:[m[32m4566[m[36m:[m      "moduleName": "[1;31mjsonwebtoken[m",
+[35msnyk.json[m[36m:[m[32m4569[m[36m:[m          "url": "https://github.com/auth0/node-[1;31mjsonwebtoken[m/commit/e1fa9dcc12054a8681db4e6373da1b30cf7016e3",
+[35msnyk.json[m[36m:[m[32m4573[m[36m:[m          "url": "https://github.com/auth0/node-[1;31mjsonwebtoken[m/releases/tag/v9.0.0",
+[35msnyk.json[m[36m:[m[32m4606[m[36m:[m      "description": "## Overview\n[[1;31mjsonwebtoken[m](https://github.com/auth0/node-[1;31mjsonwebtoken[m) is a JSON Web Token implementation (symmetric and asymmetric)\n\nAffected versions of this package are vulnerable to Improper Restriction of Security Token Assignment via the `secretOrPublicKey ` argument due to misconfigurations of the key retrieval function `[1;31mjwt.verify[m()`. Exploiting this vulnerability might result in incorrect verification of forged tokens when tokens signed with an asymmetric public key could be verified with a symmetric HS256 algorithm.\r\n\r\n**Note:**\r\nThis vulnerability affects your application if it supports the usage of both symmetric and asymmetric keys in `[1;31mjwt.verify[m()` implementation with the same key retrieval function.\n## Remediation\nUpgrade `[1;31mjsonwebtoken[m` to version 9.0.0 or higher.\n## References\n- [GitHub Commit](https://github.com/auth0/node-[1;31mjsonwebtoken[m/commit/e1fa9dcc12054a8681db4e6373da1b30cf7016e3)\n- [GitHub Release](https://github.com/auth0/node-[1;31mjsonwebtoken[m/releases/tag/v9.0.0)\n",
+[35msnyk.json[m[36m:[m[32m4623[m[36m:[m      "packageName": "[1;31mjsonwebtoken[m",
+[35msnyk.json[m[36m:[m[32m4652[m[36m:[m        "[1;31mexpress-jwt[m@0.1.3",
+[35msnyk.json[m[36m:[m[32m4653[m[36m:[m        "[1;31mjsonwebtoken[m@0.1.0"
+[35msnyk.json[m[36m:[m[32m4657[m[36m:[m        "[1;31mexpress-jwt[m@7.7.8",
+[35msnyk.json[m[36m:[m[32m4658[m[36m:[m        "[1;31mjsonwebtoken[m@9.0.3"
+[35msnyk.json[m[36m:[m[32m4662[m[36m:[m      "name": "[1;31mjsonwebtoken[m",
+[35msnyk.json[m[36m:[m[32m4664[m[36m:[m      "__filename": "C:\\Users\\ACER\\juice-shop\\node_modules\\[1;31mexpress-jwt[m\\node_modules\\[1;31mjsonwebtoken[m\\package.json",
+[35msnyk.json[m[36m:[m[32m4693[m[36m:[m      "moduleName": "[1;31mjsonwebtoken[m",
+[35msnyk.json[m[36m:[m[32m4696[m[36m:[m          "url": "https://github.com/auth0/node-[1;31mjsonwebtoken[m/commit/e1fa9dcc12054a8681db4e6373da1b30cf7016e3",
+[35msnyk.json[m[36m:[m[32m4700[m[36m:[m          "url": "https://github.com/auth0/node-[1;31mjsonwebtoken[m/releases/tag/v9.0.0",
+[35msnyk.json[m[36m:[m[32m4733[m[36m:[m      "description": "## Overview\n[[1;31mjsonwebtoken[m](https://github.com/auth0/node-[1;31mjsonwebtoken[m) is a JSON Web Token implementation (symmetric and asymmetric)\n\nAffected versions of this package are vulnerable to Use of a Broken or Risky Cryptographic Algorithm such that the library can be misconfigured to use legacy, insecure key types for signature verification. For example, DSA keys could be used with the RS256 algorithm. \r\n\r\n## Exploitability\r\n\r\nUsers are affected when using an algorithm and a key type _other_ than the combinations mentioned below:\r\n\r\nEC: ES256, ES384, ES512\r\n                  \r\nRSA: RS256, RS384, RS512, PS256, PS384, PS512 \r\n\r\nRSA-PSS: PS256, PS384, PS512                      \r\n\r\nAnd for Elliptic Curve algorithms:\r\n\r\nES256: prime256v1\r\n\r\nES384: secp384r1\r\n\r\nES512:  secp521r1 \r\n\r\n## Workaround \r\n\r\nUsers who are unable to upgrade to the fixed version can use the  `allowInvalidAsymmetricKeyTypes` option  to `true` in the `sign()` and `verify()` functions to continue usage of invalid key type/algorithm combination in 9.0.0 for legacy compatibility.\n## Remediation\nUpgrade `[1;31mjsonwebtoken[m` to version 9.0.0 or higher.\n## References\n- [GitHub Commit](https://github.com/auth0/node-[1;31mjsonwebtoken[m/commit/e1fa9dcc12054a8681db4e6373da1b30cf7016e3)\n- [GitHub Release](https://github.com/auth0/node-[1;31mjsonwebtoken[m/releases/tag/v9.0.0)\n",
+[35msnyk.json[m[36m:[m[32m4750[m[36m:[m      "packageName": "[1;31mjsonwebtoken[m",
+[35msnyk.json[m[36m:[m[32m4779[m[36m:[m        "[1;31mexpress-jwt[m@0.1.3",
+[35msnyk.json[m[36m:[m[32m4780[m[36m:[m        "[1;31mjsonwebtoken[m@0.1.0"
+[35msnyk.json[m[36m:[m[32m4784[m[36m:[m        "[1;31mexpress-jwt[m@7.7.8",
+[35msnyk.json[m[36m:[m[32m4785[m[36m:[m        "[1;31mjsonwebtoken[m@9.0.3"
+[35msnyk.json[m[36m:[m[32m4789[m[36m:[m      "name": "[1;31mjsonwebtoken[m",
+[35msnyk.json[m[36m:[m[32m4791[m[36m:[m      "__filename": "C:\\Users\\ACER\\juice-shop\\node_modules\\[1;31mexpress-jwt[m\\node_modules\\[1;31mjsonwebtoken[m\\package.json",
+[35msnyk.json[m[36m:[m[32m4795[m[36m:[m      "id": "npm:[1;31mjsonwebtoken[m:20150331",
+[35msnyk.json[m[36m:[m[32m4812[m[36m:[m          "id": "patch:npm:[1;31mjsonwebtoken[m:20150331:0",
+[35msnyk.json[m[36m:[m[32m4814[m[36m:[m            "https://snyk-patches.s3.amazonaws.com/npm/[1;31mjsonwebtoken[m/20150331/[1;31mjsonwebtoken[m_20150331_0_0_1bb584bc382295eeb7ee8c4452a673a77a68b687_snyk.patch"
+[35msnyk.json[m[36m:[m[32m4830[m[36m:[m      "moduleName": "[1;31mjsonwebtoken[m",
+[35msnyk.json[m[36m:[m[32m4837[m[36m:[m          "url": "https://github.com/auth0/node-[1;31mjsonwebtoken[m/commit/1bb584bc382295eeb7ee8c4452a673a77a68b687",
+[35msnyk.json[m[36m:[m[32m4898[m[36m:[m      "description": "## Overview\r\n[`[1;31mjsonwebtoken[m`](https://www.npmjs.com/package/[1;31mjsonwebtoken[m) is a JSON Web token implementation for symmetric and asymmetric keys.\r\nAffected versions of this package are vulnerable to an Authentication Bypass attack, due to the \"algorithm\" not being enforced. Attackers are given the opportunity to choose the algorithm sent to the server and generate signatures with arbitrary contents. The server expects an asymmetric key (RSA) but is sent a symmetric key (HMAC-SHA) with RSA's public key, so instead of going through a key validation process, the server will think the public key is actually an HMAC private key.\r\n\r\n## Remediation\r\nUpgrade `[1;31mjsonwebtoken[m` to version 4.2.2 or greater.\r\n\r\n## References\r\n- [GitHub Commit](https://github.com/auth0/node-[1;31mjsonwebtoken[m/commit/1bb584bc382295eeb7ee8c4452a673a77a68b687)\r\n- [Tim McLean Blog](https://www.timmclean.net/2015/02/25/jwt-alg-none.html)\r\n- [Auth0 Blog](https://auth0.com/blog/2015/03/31/critical-vulnerabilities-in-json-web-token-libraries/)",
+[35msnyk.json[m[36m:[m[32m4919[m[36m:[m          "npm:[1;31mjsonwebtoken[m:20150331"
+[35msnyk.json[m[36m:[m[32m4922[m[36m:[m      "packageName": "[1;31mjsonwebtoken[m",
+[35msnyk.json[m[36m:[m[32m4956[m[36m:[m        "[1;31mexpress-jwt[m@0.1.3",
+[35msnyk.json[m[36m:[m[32m4957[m[36m:[m        "[1;31mjsonwebtoken[m@0.1.0"
+[35msnyk.json[m[36m:[m[32m4961[m[36m:[m        "[1;31mexpress-jwt[m@3.0.0",
+[35msnyk.json[m[36m:[m[32m4962[m[36m:[m        "[1;31mjsonwebtoken[m@5.7.0"
+[35msnyk.json[m[36m:[m[32m4966[m[36m:[m      "name": "[1;31mjsonwebtoken[m",
+[35msnyk.json[m[36m:[m[32m4968[m[36m:[m      "__filename": "C:\\Users\\ACER\\juice-shop\\node_modules\\[1;31mexpress-jwt[m\\node_modules\\[1;31mjsonwebtoken[m\\package.json",
+[35msnyk.json[m[36m:[m[32m4997[m[36m:[m      "moduleName": "[1;31mjsonwebtoken[m",
+[35msnyk.json[m[36m:[m[32m5000[m[36m:[m          "url": "https://github.com/auth0/node-[1;31mjsonwebtoken[m/commit/e1fa9dcc12054a8681db4e6373da1b30cf7016e3",
+[35msnyk.json[m[36m:[m[32m5004[m[36m:[m          "url": "https://github.com/auth0/node-[1;31mjsonwebtoken[m/releases/tag/v9.0.0",
+[35msnyk.json[m[36m:[m[32m5037[m[36m:[m      "description": "## Overview\n[[1;31mjsonwebtoken[m](https://github.com/auth0/node-[1;31mjsonwebtoken[m) is a JSON Web Token implementation (symmetric and asymmetric)\n\nAffected versions of this package are vulnerable to Improper Authentication such that the lack of algorithm definition in the `[1;31mjwt.verify[m()` function can lead to signature validation bypass due to defaulting to the `none` algorithm for signature verification. \r\n\r\n## Exploitability\r\nUsers are affected only if all of the following conditions are true for the `[1;31mjwt.verify[m()` function:\r\n\r\n1) A token with no signature is received.\r\n\r\n2) No algorithms are specified.\r\n\r\n3) A falsy (e.g., `null`, `false`, `undefined`) secret or key is passed.\n## Remediation\nUpgrade `[1;31mjsonwebtoken[m` to version 9.0.0 or higher.\n## References\n- [GitHub Commit](https://github.com/auth0/node-[1;31mjsonwebtoken[m/commit/e1fa9dcc12054a8681db4e6373da1b30cf7016e3)\n- [GitHub Release](https://github.com/auth0/node-[1;31mjsonwebtoken[m/releases/tag/v9.0.0)\n",
+[35msnyk.json[m[36m:[m[32m5054[m[36m:[m      "packageName": "[1;31mjsonwebtoken[m",
+[35msnyk.json[m[36m:[m[32m5083[m[36m:[m        "[1;31mjsonwebtoken[m@0.4.0"
+[35msnyk.json[m[36m:[m[32m5087[m[36m:[m        "[1;31mjsonwebtoken[m@9.0.0"
+[35msnyk.json[m[36m:[m[32m5091[m[36m:[m      "name": "[1;31mjsonwebtoken[m",
+[35msnyk.json[m[36m:[m[32m5093[m[36m:[m      "__filename": "C:\\Users\\ACER\\juice-shop\\node_modules\\[1;31mjsonwebtoken[m\\package.json",
+[35msnyk.json[m[36m:[m[32m5122[m[36m:[m      "moduleName": "[1;31mjsonwebtoken[m",
+[35msnyk.json[m[36m:[m[32m5125[m[36m:[m          "url": "https://github.com/auth0/node-[1;31mjsonwebtoken[m/commit/e1fa9dcc12054a8681db4e6373da1b30cf7016e3",
+[35msnyk.json[m[36m:[m[32m5129[m[36m:[m          "url": "https://github.com/auth0/node-[1;31mjsonwebtoken[m/releases/tag/v9.0.0",
+[35msnyk.json[m[36m:[m[32m5162[m[36m:[m      "description": "## Overview\n[[1;31mjsonwebtoken[m](https://github.com/auth0/node-[1;31mjsonwebtoken[m) is a JSON Web Token implementation (symmetric and asymmetric)\n\nAffected versions of this package are vulnerable to Improper Restriction of Security Token Assignment via the `secretOrPublicKey ` argument due to misconfigurations of the key retrieval function `[1;31mjwt.verify[m()`. Exploiting this vulnerability might result in incorrect verification of forged tokens when tokens signed with an asymmetric public key could be verified with a symmetric HS256 algorithm.\r\n\r\n**Note:**\r\nThis vulnerability affects your application if it supports the usage of both symmetric and asymmetric keys in `[1;31mjwt.verify[m()` implementation with the same key retrieval function.\n## Remediation\nUpgrade `[1;31mjsonwebtoken[m` to version 9.0.0 or higher.\n## References\n- [GitHub Commit](https://github.com/auth0/node-[1;31mjsonwebtoken[m/commit/e1fa9dcc12054a8681db4e6373da1b30cf7016e3)\n- [GitHub Release](https://github.com/auth0/node-[1;31mjsonwebtoken[m/releases/tag/v9.0.0)\n",
+[35msnyk.json[m[36m:[m[32m5179[m[36m:[m      "packageName": "[1;31mjsonwebtoken[m",
+[35msnyk.json[m[36m:[m[32m5208[m[36m:[m        "[1;31mjsonwebtoken[m@0.4.0"
+[35msnyk.json[m[36m:[m[32m5212[m[36m:[m        "[1;31mjsonwebtoken[m@9.0.0"
+[35msnyk.json[m[36m:[m[32m5216[m[36m:[m      "name": "[1;31mjsonwebtoken[m",
+[35msnyk.json[m[36m:[m[32m5218[m[36m:[m      "__filename": "C:\\Users\\ACER\\juice-shop\\node_modules\\[1;31mjsonwebtoken[m\\package.json",
+[35msnyk.json[m[36m:[m[32m5247[m[36m:[m      "moduleName": "[1;31mjsonwebtoken[m",
+[35msnyk.json[m[36m:[m[32m5250[m[36m:[m          "url": "https://github.com/auth0/node-[1;31mjsonwebtoken[m/commit/e1fa9dcc12054a8681db4e6373da1b30cf7016e3",
+[35msnyk.json[m[36m:[m[32m5254[m[36m:[m          "url": "https://github.com/auth0/node-[1;31mjsonwebtoken[m/releases/tag/v9.0.0",
+[35msnyk.json[m[36m:[m[32m5287[m[36m:[m      "description": "## Overview\n[[1;31mjsonwebtoken[m](https://github.com/auth0/node-[1;31mjsonwebtoken[m) is a JSON Web Token implementation (symmetric and asymmetric)\n\nAffected versions of this package are vulnerable to Use of a Broken or Risky Cryptographic Algorithm such that the library can be misconfigured to use legacy, insecure key types for signature verification. For example, DSA keys could be used with the RS256 algorithm. \r\n\r\n## Exploitability\r\n\r\nUsers are affected when using an algorithm and a key type _other_ than the combinations mentioned below:\r\n\r\nEC: ES256, ES384, ES512\r\n                  \r\nRSA: RS256, RS384, RS512, PS256, PS384, PS512 \r\n\r\nRSA-PSS: PS256, PS384, PS512                      \r\n\r\nAnd for Elliptic Curve algorithms:\r\n\r\nES256: prime256v1\r\n\r\nES384: secp384r1\r\n\r\nES512:  secp521r1 \r\n\r\n## Workaround \r\n\r\nUsers who are unable to upgrade to the fixed version can use the  `allowInvalidAsymmetricKeyTypes` option  to `true` in the `sign()` and `verify()` functions to continue usage of invalid key type/algorithm combination in 9.0.0 for legacy compatibility.\n## Remediation\nUpgrade `[1;31mjsonwebtoken[m` to version 9.0.0 or higher.\n## References\n- [GitHub Commit](https://github.com/auth0/node-[1;31mjsonwebtoken[m/commit/e1fa9dcc12054a8681db4e6373da1b30cf7016e3)\n- [GitHub Release](https://github.com/auth0/node-[1;31mjsonwebtoken[m/releases/tag/v9.0.0)\n",
+[35msnyk.json[m[36m:[m[32m5304[m[36m:[m      "packageName": "[1;31mjsonwebtoken[m",
+[35msnyk.json[m[36m:[m[32m5333[m[36m:[m        "[1;31mjsonwebtoken[m@0.4.0"
+[35msnyk.json[m[36m:[m[32m5337[m[36m:[m        "[1;31mjsonwebtoken[m@9.0.0"
+[35msnyk.json[m[36m:[m[32m5341[m[36m:[m      "name": "[1;31mjsonwebtoken[m",
+[35msnyk.json[m[36m:[m[32m5343[m[36m:[m      "__filename": "C:\\Users\\ACER\\juice-shop\\node_modules\\[1;31mjsonwebtoken[m\\package.json",
+[35msnyk.json[m[36m:[m[32m5347[m[36m:[m      "id": "npm:[1;31mjsonwebtoken[m:20150331",
+[35msnyk.json[m[36m:[m[32m5364[m[36m:[m          "id": "patch:npm:[1;31mjsonwebtoken[m:20150331:0",
+[35msnyk.json[m[36m:[m[32m5366[m[36m:[m            "https://snyk-patches.s3.amazonaws.com/npm/[1;31mjsonwebtoken[m/20150331/[1;31mjsonwebtoken[m_20150331_0_0_1bb584bc382295eeb7ee8c4452a673a77a68b687_snyk.patch"
+[35msnyk.json[m[36m:[m[32m5382[m[36m:[m      "moduleName": "[1;31mjsonwebtoken[m",
+[35msnyk.json[m[36m:[m[32m5389[m[36m:[m          "url": "https://github.com/auth0/node-[1;31mjsonwebtoken[m/commit/1bb584bc382295eeb7ee8c4452a673a77a68b687",
+[35msnyk.json[m[36m:[m[32m5450[m[36m:[m      "description": "## Overview\r\n[`[1;31mjsonwebtoken[m`](https://www.npmjs.com/package/[1;31mjsonwebtoken[m) is a JSON Web token implementation for symmetric and asymmetric keys.\r\nAffected versions of this package are vulnerable to an Authentication Bypass attack, due to the \"algorithm\" not being enforced. Attackers are given the opportunity to choose the algorithm sent to the server and generate signatures with arbitrary contents. The server expects an asymmetric key (RSA) but is sent a symmetric key (HMAC-SHA) with RSA's public key, so instead of going through a key validation process, the server will think the public key is actually an HMAC private key.\r\n\r\n## Remediation\r\nUpgrade `[1;31mjsonwebtoken[m` to version 4.2.2 or greater.\r\n\r\n## References\r\n- [GitHub Commit](https://github.com/auth0/node-[1;31mjsonwebtoken[m/commit/1bb584bc382295eeb7ee8c4452a673a77a68b687)\r\n- [Tim McLean Blog](https://www.timmclean.net/2015/02/25/jwt-alg-none.html)\r\n- [Auth0 Blog](https://auth0.com/blog/2015/03/31/critical-vulnerabilities-in-json-web-token-libraries/)",
+[35msnyk.json[m[36m:[m[32m5471[m[36m:[m          "npm:[1;31mjsonwebtoken[m:20150331"
+[35msnyk.json[m[36m:[m[32m5474[m[36m:[m      "packageName": "[1;31mjsonwebtoken[m",
+[35msnyk.json[m[36m:[m[32m5508[m[36m:[m        "[1;31mjsonwebtoken[m@0.4.0"
+[35msnyk.json[m[36m:[m[32m5512[m[36m:[m        "[1;31mjsonwebtoken[m@5.0.0"
+[35msnyk.json[m[36m:[m[32m5516[m[36m:[m      "name": "[1;31mjsonwebtoken[m",
+[35msnyk.json[m[36m:[m[32m5518[m[36m:[m      "__filename": "C:\\Users\\ACER\\juice-shop\\node_modules\\[1;31mjsonwebtoken[m\\package.json",
+[35msnyk.json[m[36m:[m[32m5652[m[36m:[m        "[1;31mjsonwebtoken[m@0.4.0",
+[35msnyk.json[m[36m:[m[32m5657[m[36m:[m        "[1;31mjsonwebtoken[m@5.0.0",
+[35msnyk.json[m[36m:[m[32m5771[m[36m:[m        "[1;31mjsonwebtoken[m@0.4.0",
+[35msnyk.json[m[36m:[m[32m5776[m[36m:[m        "[1;31mjsonwebtoken[m@5.0.0",
+[35msnyk.json[m[36m:[m[32m5917[m[36m:[m        "[1;31mexpress-jwt[m@0.1.3",
+[35msnyk.json[m[36m:[m[32m5918[m[36m:[m        "[1;31mjsonwebtoken[m@0.1.0",
+[35msnyk.json[m[36m:[m[32m5923[m[36m:[m        "[1;31mexpress-jwt[m@3.0.0",
+[35msnyk.json[m[36m:[m[32m5924[m[36m:[m        "[1;31mjsonwebtoken[m@5.7.0",
+[35msnyk.json[m[36m:[m[32m6038[m[36m:[m        "[1;31mexpress-jwt[m@0.1.3",
+[35msnyk.json[m[36m:[m[32m6039[m[36m:[m        "[1;31mjsonwebtoken[m@0.1.0",
+[35msnyk.json[m[36m:[m[32m6044[m[36m:[m        "[1;31mexpress-jwt[m@3.0.0",
+[35msnyk.json[m[36m:[m[32m6045[m[36m:[m        "[1;31mjsonwebtoken[m@5.7.0",
+[35msnyk.json[m[36m:[m[32m8412[m[36m:[m        "[1;31mexpress-jwt[m@0.1.3",
+[35msnyk.json[m[36m:[m[32m8413[m[36m:[m        "[1;31mjsonwebtoken[m@0.1.0",
+[35msnyk.json[m[36m:[m[32m8418[m[36m:[m        "[1;31mexpress-jwt[m@3.0.0",
+[35msnyk.json[m[36m:[m[32m8419[m[36m:[m        "[1;31mjsonwebtoken[m@5.7.0"
+[35msnyk.json[m[36m:[m[32m8425[m[36m:[m      "__filename": "C:\\Users\\ACER\\juice-shop\\node_modules\\[1;31mexpress-jwt[m\\node_modules\\moment\\package.json",
+[35msnyk.json[m[36m:[m[32m8552[m[36m:[m        "[1;31mexpress-jwt[m@0.1.3",
+[35msnyk.json[m[36m:[m[32m8553[m[36m:[m        "[1;31mjsonwebtoken[m@0.1.0",
+[35msnyk.json[m[36m:[m[32m8558[m[36m:[m        "[1;31mexpress-jwt[m@3.0.0",
+[35msnyk.json[m[36m:[m[32m8559[m[36m:[m        "[1;31mjsonwebtoken[m@5.7.0"
+[35msnyk.json[m[36m:[m[32m8565[m[36m:[m      "__filename": "C:\\Users\\ACER\\juice-shop\\node_modules\\[1;31mexpress-jwt[m\\node_modules\\moment\\package.json",
+[35msnyk.json[m[36m:[m[32m8739[m[36m:[m        "[1;31mexpress-jwt[m@0.1.3",
+[35msnyk.json[m[36m:[m[32m8740[m[36m:[m        "[1;31mjsonwebtoken[m@0.1.0",
+[35msnyk.json[m[36m:[m[32m8745[m[36m:[m        "[1;31mexpress-jwt[m@3.0.0",
+[35msnyk.json[m[36m:[m[32m8746[m[36m:[m        "[1;31mjsonwebtoken[m@5.7.0"
+[35msnyk.json[m[36m:[m[32m8752[m[36m:[m      "__filename": "C:\\Users\\ACER\\juice-shop\\node_modules\\[1;31mexpress-jwt[m\\node_modules\\moment\\package.json",
+[35msnyk.json[m[36m:[m[32m8866[m[36m:[m        "[1;31mexpress-jwt[m@0.1.3",
+[35msnyk.json[m[36m:[m[32m8867[m[36m:[m        "[1;31mjsonwebtoken[m@0.1.0",
+[35msnyk.json[m[36m:[m[32m8872[m[36m:[m        "[1;31mexpress-jwt[m@3.0.0",
+[35msnyk.json[m[36m:[m[32m8873[m[36m:[m        "[1;31mjsonwebtoken[m@5.7.0"
+[35msnyk.json[m[36m:[m[32m8879[m[36m:[m      "__filename": "C:\\Users\\ACER\\juice-shop\\node_modules\\[1;31mexpress-jwt[m\\node_modules\\moment\\package.json",
+[35msnyk.json[m[36m:[m[32m9126[m[36m:[m        "[1;31mexpress-jwt[m@0.1.3",
+[35msnyk.json[m[36m:[m[32m9127[m[36m:[m        "[1;31mjsonwebtoken[m@0.1.0",
+[35msnyk.json[m[36m:[m[32m9132[m[36m:[m        "[1;31mexpress-jwt[m@3.0.0",
+[35msnyk.json[m[36m:[m[32m9133[m[36m:[m        "[1;31mjsonwebtoken[m@5.7.0"
+[35msnyk.json[m[36m:[m[32m9139[m[36m:[m      "__filename": "C:\\Users\\ACER\\juice-shop\\node_modules\\[1;31mexpress-jwt[m\\node_modules\\moment\\package.json",
+[35msnyk.json[m[36m:[m[32m17101[m[36m:[m        "[1;31mjsonwebtoken[m@0.4.0",
+[35msnyk.json[m[36m:[m[32m17107[m[36m:[m        "[1;31mjsonwebtoken[m@5.0.0",
+[35msnyk.json[m[36m:[m[32m17257[m[36m:[m        "[1;31mjsonwebtoken[m@0.4.0",
+[35msnyk.json[m[36m:[m[32m17264[m[36m:[m        "[1;31mjsonwebtoken[m@5.0.0",
+[35msnyk.json[m[36m:[m[32m17415[m[36m:[m        "[1;31mexpress-jwt[m@0.1.3",
+[35msnyk.json[m[36m:[m[32m17416[m[36m:[m        "[1;31mjsonwebtoken[m@0.1.0",
+[35msnyk.json[m[36m:[m[32m17422[m[36m:[m        "[1;31mexpress-jwt[m@3.0.0",
+[35msnyk.json[m[36m:[m[32m17423[m[36m:[m        "[1;31mjsonwebtoken[m@5.7.0",
+[35msnyk.json[m[36m:[m[32m17573[m[36m:[m        "[1;31mexpress-jwt[m@0.1.3",
+[35msnyk.json[m[36m:[m[32m17574[m[36m:[m        "[1;31mjsonwebtoken[m@0.1.0",
+[35msnyk.json[m[36m:[m[32m17581[m[36m:[m        "[1;31mexpress-jwt[m@3.0.0",
+[35msnyk.json[m[36m:[m[32m17582[m[36m:[m        "[1;31mjsonwebtoken[m@5.7.0",
+[35msnyk.json[m[36m:[m[32m20403[m[36m:[m      "[1;31mexpress-jwt[m@0.1.3": {
+[35msnyk.json[m[36m:[m[32m20404[m[36m:[m        "upgradeTo": "[1;31mexpress-jwt[m@7.7.8",
+[35msnyk.json[m[36m:[m[32m20406[m[36m:[m          "[1;31mjsonwebtoken[m@0.1.0",
+[35msnyk.json[m[36m:[m[32m20407[m[36m:[m          "[1;31mjsonwebtoken[m@0.1.0",
+[35msnyk.json[m[36m:[m[32m20408[m[36m:[m          "[1;31mjsonwebtoken[m@0.1.0",
+[35msnyk.json[m[36m:[m[32m20409[m[36m:[m          "[1;31mexpress-jwt[m@0.1.3",
+[35msnyk.json[m[36m:[m[32m20410[m[36m:[m          "[1;31mjsonwebtoken[m@0.1.0",
+[35msnyk.json[m[36m:[m[32m20425[m[36m:[m          "npm:[1;31mjsonwebtoken[m:20150331",
+[35msnyk.json[m[36m:[m[32m20454[m[36m:[m      "[1;31mjsonwebtoken[m@0.4.0": {
+[35msnyk.json[m[36m:[m[32m20455[m[36m:[m        "upgradeTo": "[1;31mjsonwebtoken[m@9.0.0",
+[35msnyk.json[m[36m:[m[32m20457[m[36m:[m          "[1;31mjsonwebtoken[m@0.4.0",
+[35msnyk.json[m[36m:[m[32m20458[m[36m:[m          "[1;31mjsonwebtoken[m@0.4.0",
+[35msnyk.json[m[36m:[m[32m20459[m[36m:[m          "[1;31mjsonwebtoken[m@0.4.0",
+[35msnyk.json[m[36m:[m[32m20460[m[36m:[m          "[1;31mjsonwebtoken[m@0.4.0",
+[35msnyk.json[m[36m:[m[32m20469[m[36m:[m          "npm:[1;31mjsonwebtoken[m:20150331",
+[35mtest/api/2fa.test.ts[m[36m:[m[32m10[m[36m:[mimport jwt from '[1;31mjsonwebtoken[m'
+[35mtest/api/2fa.test.ts[m[36m:[m[32m80[m[36m:[m    const tmpTokenWurstbrot = [1;31mjwt.sign[m({

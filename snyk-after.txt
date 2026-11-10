@@ -1,0 +1,133 @@
+﻿
+Testing C:\Users\ACER\juice-shop...
+
+Tested 660 dependencies for known issues, found 43 issues, 57 vulnerable paths.
+
+
+Issues to fix by upgrading:
+
+  Upgrade glob@10.5.0 to glob@14.0.0 to fix
+  ✗ Asymmetric Resource Consumption (Amplification) (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-MINIMATCH-22111072] in minimatch@9.0.9
+    introduced by glob@10.5.0 > minimatch@9.0.9 and 6 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-GLOB-22112102] in glob@10.5.0
+    introduced by glob@10.5.0
+
+  Upgrade i18n@0.11.1 to i18n@0.14.0 to fix
+  ✗ Prototype Pollution [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-MESSAGEFORMAT-13109646] in messageformat@2.3.0
+    introduced by i18n@0.11.1 > messageformat@2.3.0
+
+  Upgrade sanitize-html@1.4.2 to sanitize-html@2.18.0 to fix
+  ✗ Cross-site Scripting (XSS) (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-SANITIZEHTML-21280765] in sanitize-html@1.4.2
+    introduced by sanitize-html@1.4.2
+  ✗ Cross-site Scripting (XSS) (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-SANITIZEHTML-21281012] in sanitize-html@1.4.2
+    introduced by sanitize-html@1.4.2
+  ✗ Cross-site Scripting (XSS) [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-SANITIZEHTML-18913500] in sanitize-html@1.4.2
+    introduced by sanitize-html@1.4.2
+  ✗ Cross-site Scripting (XSS) [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-SANITIZEHTML-17337018] in sanitize-html@1.4.2
+    introduced by sanitize-html@1.4.2
+  ✗ Cross-site Scripting (XSS) [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-SANITIZEHTML-16697325] in sanitize-html@1.4.2
+    introduced by sanitize-html@1.4.2
+  ✗ Improper Encoding or Escaping of Output [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-SANITIZEHTML-16759743] in sanitize-html@1.4.2
+    introduced by sanitize-html@1.4.2
+  ✗ Information Exposure [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-SANITIZEHTML-6256334] in sanitize-html@1.4.2
+    introduced by sanitize-html@1.4.2
+  ✗ Regular Expression Denial of Service (ReDoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-SANITIZEHTML-2957526] in sanitize-html@1.4.2
+    introduced by sanitize-html@1.4.2
+  ✗ Validation Bypass [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-SANITIZEHTML-1070780] in sanitize-html@1.4.2
+    introduced by sanitize-html@1.4.2
+  ✗ Access Restriction Bypass [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-SANITIZEHTML-1070786] in sanitize-html@1.4.2
+    introduced by sanitize-html@1.4.2
+  ✗ Cross-site Scripting (XSS) [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-SANITIZEHTML-585892] in sanitize-html@1.4.2
+    introduced by sanitize-html@1.4.2
+  ✗ Cross-site Scripting (XSS) [Medium Severity][https://security.snyk.io/vuln/npm:sanitize-html:20161026] in sanitize-html@1.4.2
+    introduced by sanitize-html@1.4.2
+  ✗ Regular Expression Denial of Service (ReDoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-LODASH-1018905] in lodash@2.4.2
+    introduced by sanitize-html@1.4.2 > lodash@2.4.2
+  ✗ Regular Expression Denial of Service (ReDoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-LODASH-73639] in lodash@2.4.2
+    introduced by sanitize-html@1.4.2 > lodash@2.4.2
+  ✗ Prototype Pollution [Medium Severity][https://security.snyk.io/vuln/npm:lodash:20180130] in lodash@2.4.2
+    introduced by sanitize-html@1.4.2 > lodash@2.4.2
+  ✗ Cross-site Scripting (XSS) [Medium Severity][https://security.snyk.io/vuln/npm:sanitize-html:20141024] in sanitize-html@1.4.2
+    introduced by sanitize-html@1.4.2
+  ✗ Cross-site Scripting (XSS) [Medium Severity][https://security.snyk.io/vuln/npm:sanitize-html:20160801] in sanitize-html@1.4.2
+    introduced by sanitize-html@1.4.2
+  ✗ Code Injection [High Severity][https://security.snyk.io/vuln/SNYK-JS-LODASH-1040724] in lodash@2.4.2
+    introduced by sanitize-html@1.4.2 > lodash@2.4.2
+  ✗ Arbitrary Code Injection [High Severity][https://security.snyk.io/vuln/SNYK-JS-LODASH-15869625] in lodash@2.4.2
+    introduced by sanitize-html@1.4.2 > lodash@2.4.2
+  ✗ Prototype Pollution [High Severity][https://security.snyk.io/vuln/SNYK-JS-LODASH-450202] in lodash@2.4.2
+    introduced by sanitize-html@1.4.2 > lodash@2.4.2
+  ✗ Prototype Pollution [High Severity][https://security.snyk.io/vuln/SNYK-JS-LODASH-608086] in lodash@2.4.2
+    introduced by sanitize-html@1.4.2 > lodash@2.4.2
+  ✗ Prototype Pollution [High Severity][https://security.snyk.io/vuln/SNYK-JS-LODASH-6139239] in lodash@2.4.2
+    introduced by sanitize-html@1.4.2 > lodash@2.4.2
+  ✗ Prototype Pollution [High Severity][https://security.snyk.io/vuln/SNYK-JS-LODASH-73638] in lodash@2.4.2
+    introduced by sanitize-html@1.4.2 > lodash@2.4.2
+
+
+Issues with no direct upgrade or patch:
+  ✗ Arbitrary File Write via Archive Extraction (Zip Slip) [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-DECOMPRESS-16415209] in decompress@4.2.1
+    introduced by download@8.0.0 > decompress@4.2.1
+  No upgrade or patch available
+  ✗ Directory Traversal [High Severity][https://security.snyk.io/vuln/SNYK-JS-DECOMPRESS-17874437] in decompress@4.2.1
+    introduced by download@8.0.0 > decompress@4.2.1
+  No upgrade or patch available
+  ✗ Symlink Attack [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-DECOMPRESS-17937327] in decompress@4.2.1
+    introduced by download@8.0.0 > decompress@4.2.1
+  No upgrade or patch available
+  ✗ Symlink Attack [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-DECOMPRESS-17937340] in decompress@4.2.1
+    introduced by download@8.0.0 > decompress@4.2.1
+  No upgrade or patch available
+  ✗ Directory Traversal [High Severity][https://security.snyk.io/vuln/SNYK-JS-DECOMPRESS-17937347] in decompress@4.2.1
+    introduced by download@8.0.0 > decompress@4.2.1
+  No upgrade or patch available
+  ✗ Directory Traversal [Critical Severity][https://security.snyk.io/vuln/SNYK-JS-DECOMPRESS-20254116] in decompress@4.2.1
+    introduced by download@8.0.0 > decompress@4.2.1
+  No upgrade or patch available
+  ✗ Arbitrary File Write via Archive Extraction (Zip Slip) [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-DECOMPRESSTAR-559095] in decompress-tar@4.1.1
+    introduced by download@8.0.0 > decompress@4.2.1 > decompress-tar@4.1.1 and 2 other path(s)
+  No upgrade or patch available
+  ✗ Open Redirect [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-GOT-2932019] in got@8.3.2
+    introduced by download@8.0.0 > got@8.3.2
+  This issue was fixed in versions: 11.8.5, 12.1.0
+  ✗ Information Exposure [Low Severity][https://security.snyk.io/vuln/SNYK-JS-HBS-1566555] in hbs@4.4.0
+    introduced by hbs@4.4.0
+  No upgrade or patch available
+  ✗ Origin Validation Error [High Severity][https://security.snyk.io/vuln/SNYK-JS-HTTPCACHESEMANTICS-19964064] in http-cache-semantics@4.3.0
+    introduced by download@8.0.0 > got@8.3.2 > cacheable-request@2.1.4 > http-cache-semantics@3.8.1 and 1 other path(s)
+  No upgrade or patch available
+  ✗ Improper Authorization [High Severity][https://security.snyk.io/vuln/SNYK-JS-HTTPCACHESEMANTICS-19964068] in http-cache-semantics@4.3.0
+    introduced by download@8.0.0 > got@8.3.2 > cacheable-request@2.1.4 > http-cache-semantics@3.8.1 and 1 other path(s)
+  No upgrade or patch available
+  ✗ Regular Expression Denial of Service (ReDoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-HTTPCACHESEMANTICS-3248783] in http-cache-semantics@3.8.1
+    introduced by download@8.0.0 > got@8.3.2 > cacheable-request@2.1.4 > http-cache-semantics@3.8.1
+  This issue was fixed in versions: 4.1.1
+  ✗ Missing Release of Resource after Effective Lifetime [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-INFLIGHT-6095116] in inflight@1.0.6
+    introduced by sqlite3@5.1.7 > node-gyp@8.4.1 > glob@7.2.3 > inflight@1.0.6 and 4 other path(s)
+  No upgrade or patch available
+  ✗ Arbitrary Code Injection [Critical Severity][https://security.snyk.io/vuln/SNYK-JS-MARSDB-480405] in marsdb@0.6.11
+    introduced by marsdb@0.6.11
+  No upgrade or patch available
+  ✗ Sandbox Bypass [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-NOTEVIL-2385946] in notevil@1.3.3
+    introduced by notevil@1.3.3
+  No upgrade or patch available
+  ✗ Incorrect Control Flow Scoping [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-TOOTALLNATEONCE-15250612] in @tootallnate/once@1.1.2
+    introduced by sqlite3@5.1.7 > node-gyp@8.4.1 > make-fetch-happen@9.1.0 > http-proxy-agent@4.0.1 > @tootallnate/once@1.1.2
+  This issue was fixed in versions: 2.0.1, 3.0.1
+  ✗ Improper Validation of Specified Index, Position, or Offset in Input [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-UUID-16133035] in uuid@8.3.2
+    introduced by sequelize@6.37.8 > uuid@8.3.2
+  This issue was fixed in versions: 11.1.1, 14.0.0
+
+
+
+Organization:      bintangsr21
+Package manager:   npm
+Target file:       package-lock.json
+Project name:      juice-shop
+Open source:       no
+Project path:      C:\Users\ACER\juice-shop
+Licenses:          enabled
+
+Tip: Detected multiple supported manifests (1), use --all-projects to scan all of them at once.
+
+
