@@ -230,5 +230,10 @@
     "esbuild@0.28.1": true,
     "@scarf/scarf": false,
     "cypress@15.17.0": true
+  },
+  "overrides": {
+    "replace": {
+      "minimatch": "3.1.5"
+    }
   }
 }
